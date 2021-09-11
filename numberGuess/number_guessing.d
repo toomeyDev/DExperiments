@@ -1,6 +1,7 @@
 import std.stdio;
 void main()
 {
+	// simple number guessing game
 	writeln("Welcome!");
 	int i = 1000;
 	do{
