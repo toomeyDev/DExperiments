@@ -2,11 +2,15 @@ import std.stdio;
 import std.random;
 void main()
 {
-	// simple number guessing game
+	/* A simple number guessing game, prompts the user to
+	* guess a number randomly chosen from 0-25, program
+	* must be recompiled to generate a new random number */
+	
 	writeln("Welcome!");
 	auto rng = Random(26); // create a random number generator from 0-25
 	auto num = uniform(0, 26, rng);
 	do{
+		writeln("Choosing a random number from 0-25...");
 		writeln("Guess the number: ");
 		int guess;	
 		readf(" %s", &guess);
