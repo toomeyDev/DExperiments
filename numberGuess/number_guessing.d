@@ -7,10 +7,9 @@ void main()
 	* must be recompiled to generate a new random number */
 	
 	writeln("Welcome!");
-	auto rng = Random(26); // create a random number generator from 0-25
-	auto num = uniform(0, 26, rng);
+	int num = uniform(1, 26);
 	do{
-		writeln("Choosing a random number from 0-25...");
+		writeln("Choosing a random number from 1-25...");
 		writeln("Guess the number: ");
 		int guess;	
 		readf(" %s", &guess);
