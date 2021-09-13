@@ -1,5 +1,6 @@
 import std.stdio;
 import std.random;
+
 void main()
 {
 	/* A simple number guessing game, prompts the user to
@@ -7,9 +8,9 @@ void main()
 	* will generate a new random number each time it is run. */
 	
 	writeln("Welcome!");
+	writeln("Choosing a random number from 1-25...");
 	int num = uniform(1, 26);
 	do{
-		writeln("Choosing a random number from 1-25...");
 		writeln("Guess the number: ");
 		int guess;	
 		readf(" %s", &guess);
@@ -25,4 +26,3 @@ void main()
 		}
 	}while(true);
 }
-
