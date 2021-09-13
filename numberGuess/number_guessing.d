@@ -4,7 +4,7 @@ void main()
 {
 	/* A simple number guessing game, prompts the user to
 	* guess a number randomly chosen from 0-25, program
-	* must be recompiled to generate a new random number */
+	* will generate a new random number each time it is run. */
 	
 	writeln("Welcome!");
 	int num = uniform(1, 26);
@@ -13,15 +13,15 @@ void main()
 		writeln("Guess the number: ");
 		int guess;	
 		readf(" %s", &guess);
-		writeln("The number is ", num, "!");
-		if(guess == num)
-		{
-			writeln("Congratulations, ", guess, " is the correct number!");
+		if (guess < num) {
+			writeln(guess, " is too small, try a bigger number.");	
+		} else if (guess > num){
+			writeln(guess, " is too big, try a smaller number.");
+		} else if (guess == num) {
+			writeln("Congratulations, ", guess, " is the number!");
 			break;
-		}
-		else
-		{
-			writeln("Wrong guess, try again.");	
+		} else {
+			writeln("Invalid input, please type a valid integer.");
 		}
 	}while(true);
 }
